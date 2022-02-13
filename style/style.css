@@ -1,0 +1,168 @@
+/*========================= GOOGLE FONTS ============================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*========================= BASE ============================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-image: var(--body-color);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: var(--container-color);
+}
+
+/*========================= VARIABLES ============================*/
+:root {
+  /*========================= Colors ============================*/
+  --first-color: #d88771;
+  --second-color: rgb(73, 204, 73);
+  --body-color: linear-gradient(120deg, #e2c35d, #d88771);
+  --container-color: #fff;
+  /*===================== Font and typography =======================*/
+  --body-font: "Poppins", sans-serif;
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+
+  /*======================== Font weight ==========================*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*======================== Margenes Bottom ==========================*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ...*/
+  --mb-0-5: 0.5rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+}
+
+header {
+  font-size: var(--mb-1-5);
+}
+header,
+form {
+  display: flex;
+  min-height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: var(--mb-0-5);
+  font-size: var(--mb-2);
+  border: none;
+  background: var(--container-color);
+}
+form button{
+color: var(--first-color);
+background: var(--container-color);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+form button:hover{
+background: var(--first-color);
+color: var(--container-color);
+}
+.todo{
+display: flex;
+margin: var(--mb-0-5);
+background: var(--container-color);
+color: black;
+justify-content: space-between;
+align-items: center;
+font-size: var(--mb-1-5);
+transition: all 0.5s ease;
+}
+ .todo-container{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+} 
+.todo li{
+    flex: 1;
+}
+.todo-item{
+  padding: 0rem 0.5rem;
+}
+.trash-btn,
+.check-btn {
+    cursor: pointer;
+    border: none;
+    padding: var(--mb-1);
+    font-size: var(--mb-1-5);
+    background-color: transparent;
+  }
+  .trash-btn{
+    color: var(--first-color);
+  }
+  .trash-btn:hover {
+    cursor: pointer;
+    color: var(--container-color);
+    background: var(--first-color);
+    font-size: var(--mb-1-5);
+  }
+  
+  .check-btn {
+    color: var(--second-color);
+    cursor: pointer;
+  }
+  .check-btn:hover {
+    cursor: pointer;
+    color: var(--container-color);
+    background: var(--second-color);
+    font-size: var(--mb-1-5);
+  }
+  .uil-trash-alt, .uil-check-square{
+    pointer-events: none;
+  }
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+  }
+.select{
+    margin: var(--mb-1);
+    position: relative;
+    overflow: hidden;
+}
+select{
+  color: var(--first-color);
+  width: 10rem;
+  cursor: pointer;
+  padding: var(--mb-1);
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  background: var(--first-color);
+  top: 0;
+  right: 0;
+  padding: var(--mb-1);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after{
+  background: var(--container-color);
+  color: var(--first-color); 
+}
